@@ -7,7 +7,7 @@
 | 1 事实扫描 | 搜索与读取 | 一句话需求 | 构建、OpenSpec、代码位置、构建基线 | 无 |
 | 2 需求拷问 | `grilling` | 一句话需求 + 事实 | 需求决策记录（对话内） | 用户确认决策记录 |
 | 3 方案设计 | `brainstorming` | 决策记录 | 2–3 个方案 + 推荐（对话内） | 用户选定方案 |
-| 3.5 原型验证 | `prototype` | 选定方案 + 决策记录 | 逻辑/UI 原型（条件触发） | 用户验证原型 |
+| 3.5 原型验证 | 逻辑原型模板 / `prototype` | 选定方案 + 决策记录 | 按需制作逻辑或 UI 原型 | 涉及前端先询问是否制作 UI 原型，制作后由用户验证 |
 | 4 变更提案 | `openspec-propose` | 决策记录 + 选定方案 | `openspec/changes/<id>/` 四件套 | — |
 | 5 任务拆解 | `writing-plans` | `design.md` + `specs/` | `plan.md` + 对齐的 `tasks.md` | 用户批准 change |
 | 6 实施 | `openspec-apply-change` + TDD | `tasks.md` + `plan.md` | 代码 + 测试 + 验证输出 | 每任务 RED/GREEN |
@@ -239,7 +239,7 @@ UI 任务完成后，用极端数据测试：
 |---|---|
 | `grilling` | 用 `references/grilling-fallback.md` 的协议，明确告诉用户"grilling 技能不可用，使用内置协议" |
 | `brainstorming` | 直接在对话里给 2–3 个方案 + 取舍 + 推荐，不写设计文档 |
-| `prototype` | 按上面的逻辑/UI 原型模板手工构建简化版，用单个 HTML 文件实现 |
+| `prototype` | 用户确认需要 UI 原型后，按上面的 UI 原型模板用单个 HTML 文件构建简化版 |
 | `openspec-propose` | CLI：`openspec new change <id> --description ...`，再按 `openspec instructions` 逐个写四件套，最后 `openspec validate <id> --strict` |
 | `writing-plans` | 直接在 `openspec/changes/<id>/plan.md` 写任务清单，格式按上面的模板 |
 | `openspec-apply-change` | 按 `tasks.md` 逐项实现，每项走 RED/GREEN，更新复选框 |
