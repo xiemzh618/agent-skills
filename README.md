@@ -18,5 +18,3 @@ ln -s "$(pwd)/skills/lead-delegation" ~/.agents/skills/lead-delegation
 ```
 
 示例请求：“用 `lead-delegation` 主导这次改动。让一个子 Agent 实现接口，另一个独立检查现有测试缺口。你负责验收和集成。”
-
-主导委派的工作流参考 [BytePioneer-AI 的 lead-delegation](https://github.com/BytePioneer-AI/agent-skills/tree/main/skills/lead-delegation)。
